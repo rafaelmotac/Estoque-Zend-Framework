@@ -1,0 +1,22 @@
+<table class="table">
+	<thead>
+		<tr>
+			<td>Nome</td>
+			<td>Preço</td>
+			<td>Descrição</td>
+		</tr>
+	</thead>
+	<tbody>
+		<?php 
+			foreach ($produtos as $prod) {
+		?>
+			<tr>
+				<td><?= $prod['nome']; ?></td>
+				<td><?= $prod['preco']; ?></td>
+				<td><?= $prod['descricao']; ?></td>
+			</tr>
+		<?php
+			}
+		?>
+	</tbody>
+</table>
