@@ -7,6 +7,9 @@
  */
 return array(
     'modules' => array(
+        'ZendDeveloperTools',
+        'DoctrineModule',
+        'DoctrineORMModule',
         'Application',
         'Estoque',
     ),
@@ -16,7 +19,7 @@ return array(
             './vendor',
         ),
         'config_glob_paths' => array(
-            'config/autoload/{,*.}{global,local}.php',
+            'config/autoload/{{,*.}global,{,*.}local}.php',
         ),
     ),
 );

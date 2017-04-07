@@ -9,10 +9,11 @@ class IndexController extends AbstractActionController {
 
 	public function IndexAction(){
 
-		$produtos = [];
-	    $produtos[] = ['nome' => 'Playstation 4', 'preco' => 1700.00, 'descricao' => 'Video Game da Sony'];
-	  	$produtos[] = ['nome' => 'Xbox One', 'preco' => 1900.00, 'descricao' => 'Video Game da Microsoft'];
-	  	$produtos[] = ['nome' => 'Nintendo Wii', 'preco' => 1500.00, 'descricao' => 'Video Game da Nintendo'];
+		$entityManager = $this->getServiceLocator()->get("Doctrine\ORM\EntityManager");
+
+		$repositorio = $entityManager->getRepository('Estoque\Entity\Produto');
+
+		$produtos = $repositorio->findAll();
 
 	    $view_params = array('produtos' => $produtos);
 

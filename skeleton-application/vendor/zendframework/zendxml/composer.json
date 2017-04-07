@@ -11,12 +11,7 @@
     "homepage": "http://packages.zendframework.com/",
     "autoload": {
         "psr-0": {
-            "ZendXml\\": "library/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ZendTest\\Xml\\": "tests/ZendXmlTest/"
+            "ZendXml": "library/"
         }
     },
     "repositories": [
@@ -26,7 +21,7 @@
         }
     ],
     "require": {
-        "php": "^5.3.3 || ^7.0"
+        "php": ">=5.3.3"
     },
     "extra": {
         "branch-alias": {
@@ -34,7 +29,7 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^3.7 || ^4.0",
-        "squizlabs/php_codesniffer": "^1.5"
+        "fabpot/php-cs-fixer": "*@dev",
+        "phpunit/phpunit": "~3.7"
     }
 }
