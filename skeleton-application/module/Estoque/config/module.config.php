@@ -13,7 +13,7 @@ return array(
 					'defaults' => array(
 						'__NAMESPACE__' => 'Estoque\Controller',
 						'controller' => 'Index',
-						'action' => 'Index'
+						'action' => 'index'
 					)
 				)
 			)
@@ -27,7 +27,10 @@ return array(
 	'view_manager' => array(
 		'template_path_stack' => array (
 			__DIR__.'/../view/'
-		)
+		),
+        'template_map' => array(
+            'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
+        )
 	),
 	'doctrine' => array(
           'driver' => array(

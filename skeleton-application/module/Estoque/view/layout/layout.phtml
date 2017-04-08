@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Aplicação de Estoque</title>
+  <?php
+  echo $this->headLink()
+  ->prependStylesheet($this->basePath('css/style.css'))
+  ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+  ->prependStylesheet($this->basePath('css/bootstrap.min.css'));
+
+  echo $this->headScript()
+  ->prependFile($this->basePath('js/bootstrap.min.js'))
+  ->prependFile($this->basePath('js/jquery.min.js'));
+
+  ?>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" 
+            href="<?=$this->url('application', array('controller' => 'Index', 'action' => 'index')); ?>">
+          Estoque
+        </a>
+      </div>
+
+      <div class="navbar-collapse collapse ">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="<?=$this->url('application', array('controller' => 'Index', 'action' => 'index')); ?>">
+              Listar Produtos
+            </a>
+          </li>
+          <li>
+            <a href="<?=$this->url('application', array('controller' => 'Index', 'action' => 'cadastrar')); ?>">
+              Cadastrar Produtos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="container">
+  <?=$this->content; ?>
+</main>
+<hr />
+<footer style="text-align: center">
+  Todos os direitos reservados.
+</footer>
+</body>
+
+</html>

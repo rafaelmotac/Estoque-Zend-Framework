@@ -12,16 +12,24 @@ class Produto {
 	*@ORM\GeneratedValue(strategy="AUTO")
 	*@ORM\Column(type="integer")
 	*/
-    private $id;
-    
+	private $id;
+
 	/** @ORM\Column(type="string") */
-    private $nome;
-    
+	private $nome;
+
 	/** @ORM\Column(type="decimal", scale=2) */
-    private $preco;
+	private $preco;
 	
-    /** @ORM\Column(type="string") */
-    private $descricao;
+	/** @ORM\Column(type="string") */
+	private $descricao;
+
+	
+	public function __construct($nome, $preco, $descricao)
+	{
+		$this->nome = $nome;
+		$this->preco = $preco;
+		$this->descricao = $descricao;
+	}
 
 	public function getNome(){
 		return $this->nome;
@@ -33,6 +41,18 @@ class Produto {
 
 	public function getDescricao(){
 		return $this->descricao;
+	}
+
+	public function setNome($nome){
+		$this->nome = $nome;
+	}
+
+	public function setPreco($preco){
+		$this->preco = $preco;
+	}
+
+	public function setDescricao($descricao){
+		$this->descricao = $descricao;
 	}
 }
 
