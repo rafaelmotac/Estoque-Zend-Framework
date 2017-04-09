@@ -37,7 +37,8 @@ class IndexController extends AbstractActionController {
 			$entityManager->persist($produto);
 			$entityManager->flush();
 
-			$this->redirect()->toUrl('/Index/Index');
+
+			$this->redirect()->toUrl('Index/Index');
 			
 		}else {
 			return new ViewModel();

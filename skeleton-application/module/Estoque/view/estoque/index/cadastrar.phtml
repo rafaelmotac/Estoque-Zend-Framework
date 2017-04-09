@@ -1,10 +1,10 @@
 <h1>Cadastrar Produtos</h1>
 
-<form method="POST" action="\index/cadastrar">
+<form method="POST" action="<?=$this->url('application', array('controller' => 'Index', 'action' => 'cadastrar')); ?>">
 	
 	<div class="row">
 
-		<div class="col-md-6 col-sm-6">
+		<div class="col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
 				<label>Nome</label>
 				<input required="true" type="text" name="nome" class="form-control" />
